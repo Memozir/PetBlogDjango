@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="content__news-block" id="news">
+    <h2>Новости</h2>
+    <div class="news-block__card-wrap">
+        <div class="news-block__news-cards">
+            {% for item in news %}
+            <div class="news-block__card">
+                <img src="{{ item.image.url }}" alt="" class="news-block__card__img">
+                <div class="news-block__card__text">
+                    <span>{{ item.text }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

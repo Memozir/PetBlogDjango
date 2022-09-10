@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'article/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'article/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'article/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'article/css/article_style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog_style.css' %}">
+</head>
+<body>
+
+    <div class="wrapper">
+        {% include 'includes/header.html' %}
+        <main>
+            <div class="content">
+                <h2 class="article-name">{{article.title}}</h2>
+                {{article.text|linebreaks}}
+                <img src="{{ article.article_image.url }}" alt="" class="article-image">
+
+                <div class="read-more">
+                    <h2>Читайте также</h2>
+                
+                    {% include 'includes/small_articles.html' %}
+                </div>
+            </div>
+        </main>
+        {% include 'includes/footer.html' %}
+    </div>
+
+    <script src="{% static 'blog/js/safari-fix.js' %}"></script>
+    <script src="{% static 'blog/js/burger-menu.js' %}"></script>
+</body>
+</html>

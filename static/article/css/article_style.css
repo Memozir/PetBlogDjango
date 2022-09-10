@@ -1,0 +1,51 @@
+.content > h2, .read-more > h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.3vw;
+    padding: 50px 0 50px 0;
+}
+.content > p{
+    padding: 30px 5px;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4vw;
+}
+.read-more{
+    max-width: 100%;
+}
+.read-more > h2{
+    text-align: center;
+    padding: 200px 5px 50px 5px;
+}
+.article{
+    margin-left: 50px;
+    margin-right: 50px;
+    /* padding: 0 30px 0 30px; */
+}
+.small-articles-wrap{
+    justify-content: space-between;
+}
+.article-image{
+    max-width: 500px;
+    height: 300px;
+    margin: 50px 20px;
+}
+@media screen and (max-width: 590px){
+    .content > h2, .read-more > h2{
+        font-size: 10.8vw;
+    }
+    .content > p{
+        font-size: 4.6vw;
+    }
+}
+@media screen and (max-width: 380px){
+    .content > h2, .read-more > h2{
+        font-size: 16.8vw;
+    }
+    .content > p{
+        font-size: 7.1vw;
+    }
+}

@@ -1,0 +1,183 @@
+.questions-wrap{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    min-height: 100%;
+    min-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.600);
+}
+.questions-block{
+    display: flex;
+    justify-items: center;
+    position: relative;
+    max-width: 90%;
+    min-height: 100%;
+    background-color: #fbfbfb;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.questions-form{
+    width: 100%;
+}
+.questions-form > h3{
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0px 60px 0;
+}
+.form__close_button{
+    display: block;
+    left: 90%;
+    top: 2%;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    /* width: 3.8vw;
+    height: 2.3vw; */
+    cursor: pointer;
+}
+.form__close_button::before,
+.form__close_button::after{
+    left: 0;
+    position: absolute;
+    height: 5%;
+    width: 70%;
+    transition: all 0.3s ease 0s;
+    background-color: #000000;
+}
+.form__close_button::before,
+.form__close_button::after{
+    content: "";
+}
+
+.form__close_button::before{
+    bottom: 45%;
+    transform: rotate(-45deg);
+}
+.form__close_button::after{
+    bottom: 45%;
+    transform: rotate(45deg);
+}
+
+.display_form{
+    display: flex;
+    transition: 0.3s;
+}
+.questions-form > .questions-form__questions fieldset
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.questions-form > .questions-form__questions legend, h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3vw;
+}
+.questions-form > .questions-form__questions label{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4vw;
+}
+.question-2 > input{
+    max-width: 150px;
+    height: 45px;
+    border: 2px solid #2EA7FF;
+    border-radius: 25px;
+    text-align: center;
+}
+.questions-form > .questions-form__questions input[type=radio]{
+    -webkit-appearance: none;
+    position: relative;
+}
+.questions-form > .questions-form__questions input[type=radio]~label::before{
+    content: '';
+    display: inline-block;
+    opacity: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #2EA7FF;
+    position: relative;
+    bottom: 3px;
+    right: 16px;
+}
+.questions-form > .questions-form__questions input[type=radio]::after{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #2EA7FF;
+    border-radius: 50%;
+    background-color: transparent;
+    pointer-events: none;
+}
+.questions-form input[type=radio]:checked~label::before{
+    opacity: 1;
+}
+.questions-form__button{
+    display: block;
+    width: 125px;
+    height: 50px;
+    background-color: #2EA7FF;
+    border-radius: 10px;
+    margin: 15px auto;
+    cursor: pointer;
+    color: #000;
+}
+.questions-form__button:hover{
+    transition: 0.3s;
+    background-color: #59BAFF;
+}
+@media screen and (max-width: 767px){
+    /* .form__close_button{
+        left: 90%;
+    } */
+    .form__close_button::before,
+    .form__close_button::after{
+        left: 0;
+        position: absolute;
+        height: 5.88%;
+        width: 55%;
+        transition: all 0.3s ease 0s;
+        background-color: #000000;
+        /* top: 5px; */
+    }
+    .questions-form > .questions-form__questions legend, h3{
+        font-size: 1.7vw;
+    }
+    .questions-block > form > .questions-form__questions label{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 607px){
+    .questions-form > .questions-form__questions legend, h3{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 380px){
+    .form__close_button{
+        left: 90%;
+    }
+    .form__close_button::before,
+    .form__close_button::after{
+        left: 0;
+        position: absolute;
+        height: 6%;
+        width: 60%;
+        transition: all 0.3s ease 0s;
+        background-color: rgb(0, 0, 0);
+    }
+    .questions-form > .questions-form__questions legend, h3{
+        font-size: 4vw;
+    }
+    .questions-block > form > .questions-form__questions label{
+        font-size: 3vw;
+    }
+}

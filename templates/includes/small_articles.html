@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="small-articles-wrap">
+    {% for article in article_list %}
+    <div class="article small-article">
+        <img src="{{ article.preview_image.url }}" alt="" class="big-article__img"> <!-- img/blog/small_article_1.jpg -->
+        <p class="article__title">{{article.title}}</p>
+        <p class="article__text">{{article.description}}</p>
+        <div class="article__bottom-block">
+            <div class="article__button"><a href="{{ article.get_absolute_url }}">Подробнее</a></div>
+            <div class="article__date">
+              <span>{{article.date}}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,93 @@
+{% load static %}
+
+{% for service in services %}
+    {% if service.display == True %}
+        {% if service.filter_status == False %}
+        <div class="service filter">
+            <img src="{{service.image.url}}" alt="">
+            <div class="service__bottom">
+                <p class="service__limit">До <span class="service__limit__price">{{service.money_limit}}</span> рублей</p>
+                <p class="service__percent">{{ service.text_left_from_stake }} <span class="service__limit__price">{{service.stake}}</span>% {{ service.text_right_from_stake }}</p>
+                <p class="service__age">Возраст от <span class="service__age__amount">{{service.age_start}}-{{service.age_end}}</span> лет</p>
+                <p class="service__more-info">
+                    <a href="#">
+                        Подробнее
+                    </a>
+                    <div class="service__more-info__block">
+                        <span>
+                            {{service.more_info}}
+                        </span>
+                    </div>
+                </p>
+                <a class="service__button" href="{{ service.url }}">получить деньги</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="service">
+            <img src="{{service.image.url}}" alt="">
+            <div class="service__bottom">
+                <p class="service__limit">До <span class="service__limit__price">{{service.money_limit}}</span> рублей</p>
+                <p class="service__percent">{{ service.text_left_from_stake }} <span class="service__limit__price">{{service.stake}}</span>% {{ service.text_right_from_stake }}</p>
+                <p class="service__age">Возраст от <span class="service__age__amount">{{service.age_start}}-{{service.age_end}}</span> лет</p>
+                <p class="service__more-info">
+                    <a href="#">
+                        Подробнее
+                    </a>
+                    <div class="service__more-info__block">
+                        <span>
+                            {{service.more_info}}
+                        </span>
+                    </div>
+                </p>
+                <a class="service__button" href="{{ service.url }}">получить деньги</a>
+            </div>
+        </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% for service in services %}
+    {% if service.display == True %}
+        {% if service.filter_status == False %}
+        <div class="service services_second filter">
+            <img src="{{service.image.url}}" alt="">
+            <div class="service__bottom">
+                <p class="service__limit">До <span class="service__limit__price">{{service.money_limit}}</span> рублей</p>
+                <p class="service__percent">{{ service.text_left_from_stake }} <span class="service__limit__price">{{service.stake}}</span>% {{ service.text_right_from_stake }}</p>
+                <p class="service__age">Возраст от <span class="service__age__amount">{{service.age_start}}-{{service.age_end}}</span> лет</p>
+                <p class="service__more-info">
+                    <a href="#">
+                        Подробнее
+                    </a>
+                    <div class="service__more-info__block">
+                        <span>
+                            {{service.more_info}}
+                        </span>
+                    </div>
+                </p>
+                <a class="service__button" href="{{ service.url }}">получить деньги</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="service services_second">
+            <img src="{{service.image.url}}" alt="">
+            <div class="service__bottom">
+                <p class="service__limit">До <span class="service__limit__price">{{service.money_limit}}</span> рублей</p>
+                <p class="service__percent">{{ service.text_left_from_stake }} <span class="service__limit__price">{{service.stake}}</span>% {{ service.text_right_from_stake }}</p>
+                <p class="service__age">Возраст от <span class="service__age__amount">{{service.age_start}}-{{service.age_end}}</span> лет</p>
+                <p class="service__more-info">
+                    <a href="#">
+                        Подробнее
+                    </a>
+                    <div class="service__more-info__block">
+                        <span>
+                            {{service.more_info}}
+                        </span>
+                    </div>
+                </p>
+                <a class="service__button" href="{{ service.url }}">получить деньги</a>
+            </div>
+        </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}

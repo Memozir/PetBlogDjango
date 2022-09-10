@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog_style.css' %}">
+</head>
+<body>
+
+    <div class="wrapper">
+        {% include 'includes/header.html' %}
+
+        <main>
+            <div class="content">
+                <div class="main-title">
+                    <h1>Блог полезных статей</h1>
+                    <p>Здесь собраны все интересные статьи</p>
+                </div>
+
+                <div class="article big-article">
+                    <img src="{{ big_article.preview_image.url }}" alt="" class="big-article__img">
+                    <p class="article__title">{{ big_article.title }}</p>
+                    <p class="article__text">{{ big_article.description }}</p>
+                    <div class="article__bottom-block">
+                        <div class="article__button"><a href="{{ article.get_absolute_url }}">Подробнее</a></div>
+                        <div class="article__date">
+                            <span>{{ big_article.date }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                {% include 'includes/small_articles.html' %}
+        </main>
+        
+        {% include 'includes/footer.html' %}
+    </div>
+
+    <script src="{% static 'blog/js/safari-fix.js' %}"></script>
+    <script src="{% static 'blog/js/burger-menu.js' %}"></script>
+</body>
+</html>
