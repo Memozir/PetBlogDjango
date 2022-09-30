@@ -27,18 +27,18 @@
                     <h1>Блог полезных статей</h1>
                     <p>Здесь собраны все интересные статьи</p>
                 </div>
-
+		
                 <div class="article big-article">
                     <img src="{{ big_article.preview_image.url }}" alt="" class="big-article__img">
                     <p class="article__title">{{ big_article.title }}</p>
                     <p class="article__text">{{ big_article.description }}</p>
                     <div class="article__bottom-block">
-                        <div class="article__button"><a href="{{ article.get_absolute_url }}">Подробнее</a></div>
+                        <div class="article__button"><a href="{{ big_article.get_absolute_url }}">Подробнее</a></div>
                         <div class="article__date">
                             <span>{{ big_article.date }}</span>
                         </div>
                     </div>
-                </div>
+                </div>		
 
                 {% include 'includes/small_articles.html' %}
         </main>

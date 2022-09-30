@@ -2,7 +2,7 @@
 from pathlib import Path
 import os
 
-    # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
@@ -49,7 +49,22 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'credit.wsgi.application'
-
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'credit_db',  #os.getenv('NAME'),
+         'USER': 'postgres',  #os.getenv('USER'),
+         'PASSWORD': '188558787356_t',  #os.getenv('DB_PASSWORD'), #'esmiralda_822',
+         'HOST': '127.0.0.1',  #os.getenv('HOST'),
+         'PORT': '',
+     }
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -106,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [STATIC_DIR]

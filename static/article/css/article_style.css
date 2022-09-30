@@ -43,7 +43,7 @@
 }
 @media screen and (max-width: 380px){
     .content > h2, .read-more > h2{
-        font-size: 16.8vw;
+        font-size: 10.8vw;
     }
     .content > p{
         font-size: 7.1vw;

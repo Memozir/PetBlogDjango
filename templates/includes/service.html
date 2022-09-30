@@ -1,5 +1,6 @@
 {% load static %}
 
+{% if services|length >= 0 %}
 {% for service in services %}
     {% if service.display == True %}
         {% if service.filter_status == False %}
@@ -91,3 +92,4 @@
         {% endif %}
     {% endif %}
 {% endfor %}
+{% endif  %}
