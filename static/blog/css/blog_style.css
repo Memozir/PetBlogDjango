@@ -211,10 +211,6 @@
     .small-article > .article__text{
         font-size: 2.5vw;
     }
-    small-articles-wrap > .small-article > .article__bottom-block{
-        flex-direction: column;
-    }
-
     .big-article > .article__bottom-block{
         flex-direction: column;
     }
