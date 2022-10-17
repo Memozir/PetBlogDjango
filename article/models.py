@@ -10,7 +10,7 @@ class Article(models.Model):
     text = models.TextField('Текст')
     date = models.DateField('Дата', auto_now_add=True)
     description = models.CharField('Описание', max_length=250)
-    article_image = models.ImageField('Изборажение', null=True, upload_to=f'article/{title}')
+    article_image = models.ImageField('Изборажение', null=True, upload_to='article/')
     big_status = models.BooleanField('Большая статья', default=False)
     preview_image = models.ImageField('Предварительное изображение', upload_to='article/')
     

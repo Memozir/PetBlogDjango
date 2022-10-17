@@ -49,43 +49,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'credit.wsgi.application'
-#DATABASES = {
- #   'default': {
-  #      'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': BASE_DIR / 'db.sqlite3',
-    #}
-#}
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'credit_db',  #os.getenv('NAME'),
-         'USER': 'postgres',  #os.getenv('USER'),
-         'PASSWORD': '188558787356_t',  #os.getenv('DB_PASSWORD'), #'esmiralda_822',
-         'HOST': '127.0.0.1',  #os.getenv('HOST'),
-         'PORT': '',
-     }
-}
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# DATABASES = {
-#     'default':{
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.getenv('NAME'),
-#         'USER': os.getenv('USER'),
-#         'PASSWORD': os.getenv('DB_PASSWORD'),
-#         'HOST': os.getenv('HOST'),
-#         'PORT': '3306',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
