@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))# Path(__f
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.potomverny.ru', 'potomverny.ru']
+ALLOWED_HOSTS = ['www.potomverny.ru', 'potomverny.ru', '45.141.76.16']
 
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
