@@ -7,7 +7,7 @@
 }
 .content > p{
     padding: 30px 5px;
-    text-align: justify;
+    /* text-align: justify; */
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -41,9 +41,10 @@
         font-size: 4.6vw;
     }
 }
+
 @media screen and (max-width: 380px){
     .content > h2, .read-more > h2{
-        font-size: 16.8vw;
+        font-size: 10.8vw;
     }
     .content > p{
         font-size: 7.1vw;

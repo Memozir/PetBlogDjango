@@ -5,7 +5,7 @@
     font-size: 3.3vw;
     padding: 50px 0 50px 0;
 }
-.content > p{
+.content p{
     padding: 30px 5px;
     text-align: justify;
     font-family: 'Montserrat';
@@ -45,7 +45,7 @@
     .content > h2, .read-more > h2{
         font-size: 10.8vw;
     }
-    .content > p{
+    .content p{
         font-size: 7.1vw;
     }
 }
