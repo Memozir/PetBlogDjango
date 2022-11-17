@@ -6,9 +6,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['www.potomverny.ru', 'potomverny.ru', '45.141.76.16']
 
-# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-SCRIPTS_DIR = os.path.join(STATIC_ROOT, 'scripts')
+SCRIPTS_DIR = os.path.join(STATIC_DIR, 'scripts')
 STATICFILES_DIRS = [SCRIPTS_DIR]
 
 
