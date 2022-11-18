@@ -1,10 +1,14 @@
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #FFFFFF;
     max-width: 100%;
-    padding: 100px;
+    height: 200px;
+    padding: 20px;
 }
 footer > .footer__text{
-    max-width: 1170px;
+    max-width: 90%;
     height: 61px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -12,5 +16,5 @@ footer > .footer__text{
     font-size: 18px;
     line-height: 22px;
     color: #554E4E;
-    text-align: justify;
+    word-wrap: break-word;
 }

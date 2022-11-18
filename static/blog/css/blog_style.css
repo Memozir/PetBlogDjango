@@ -110,6 +110,7 @@
     height: 1px;
     width: 15px;
     background-color: #000;
+    margin: 0 0 0 5px;
 }
 .small-articles-wrap{
     display: flex;
@@ -122,7 +123,7 @@
     margin: 0 auto;
     min-height: 300px;
 }
-.small-articles-wrap > .small-article > .article__bottom-block{
+.small-article > .article__bottom-block{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;    
@@ -165,7 +166,17 @@
     height: 10.3vw;
     margin: 0 auto;
 }
-
+@media screen and (max-width:1151px)
+{
+    .article__bottom-block{
+        align-items: center;
+        flex-direction: column;
+    }
+    .article__bottom-block > span{
+        padding: 10px 0;
+    }
+    
+}
 @media screen and (max-width: 1000px){
     .big-article > .article__title{
         font-size: 3.3vw;
@@ -184,7 +195,7 @@
         height: 20vw;
     }
     .big-article .article__button > a{
-        font-size: 1.3vw;
+        font-size: 1.6vw;
     }
     .small-article .article__button > a{
         font-size: 1.3vw;
@@ -211,17 +222,13 @@
     .small-article > .article__text{
         font-size: 2.5vw;
     }
-    .big-article > .article__bottom-block{
+    .small-article > .article__bottom-block, .big-article > .article__bottom-block{
         flex-direction: column;
     }
     .small-article .article__button, .big-article .article__button{
         margin: 0 auto;
     }
-    .big-article .article__date{
-        justify-content: center;
-        padding: 20px;
-    }
-    .small-articles-wrap > .small-article > .article__bottom-block{
+    .small-article .article__date, .big-article .article__date{
         justify-content: center;
         padding: 20px;
     }
@@ -276,6 +283,6 @@
         font-size: 4vw;
     }
     .big-article .article__button > a{
-        font-size: 4vw;
+        font-size: 5vw;
     }
 }
