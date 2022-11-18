@@ -20,7 +20,7 @@ class News(models.Model):
 class Services(models.Model):
     title = models.CharField(verbose_name='Название', max_length=127, blank=True)
     image = models.ImageField(upload_to='services/', null=True, blank=True)
-    more_info = models.TextField(verbose_name='Подробнее', max_length=400, blank=True)
+    more_info = models.TextField(verbose_name='Подробнее', max_length=650, blank=True)
     money_limit = models.PositiveSmallIntegerField(verbose_name='Лимит по займу')
     age_start = models.PositiveSmallIntegerField(verbose_name='Начальный возраст', default=18)
     age_end = models.PositiveSmallIntegerField(verbose_name='Конечный возраст', default=65)
