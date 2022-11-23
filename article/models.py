@@ -7,6 +7,7 @@ from django.urls import reverse
 class Article(models.Model):
     
     title = models.CharField('Название', max_length=100)
+    slug = models.SlugField('Ссылка', blank=True, null=True, unique=True, db_index=True)
     text = models.TextField('Текст')
     date = models.DateField('Дата', auto_now_add=True)
     description = models.CharField('Описание', max_length=250)
@@ -20,7 +21,7 @@ class Article(models.Model):
     
     
     def get_absolute_url(self):
-        return reverse("article", kwargs={"pk": self.pk})
+        return reverse("article", kwargs={"slug": self.slug})
     
 
     
