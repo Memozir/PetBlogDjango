@@ -168,10 +168,11 @@
 }
 @media screen and (max-width:1151px)
 {
-    .article__bottom-block{
+  article  article__bottom-block {
         align-items: center;
         flex-direction: column;
     }
+
     .article__bottom-block > span{
         padding: 10px 0;
     }

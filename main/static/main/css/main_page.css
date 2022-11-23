@@ -136,10 +136,15 @@ h2{
 }
 .service__button{
     max-width: 100%;
+<<<<<<< HEAD
+    min-width: 165px;
+=======
+    min-width: 170px;
+>>>>>>> 5c8267df72960c75710ad4ffd4050063a7be6fcd
     height: 50px;
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     padding: 0 10px;
     color: #fff;
 }
