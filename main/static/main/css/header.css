@@ -6,7 +6,7 @@
     min-width: 100%;
     height: 100px;
     overflow-x: hidden;
-    position: sticky;
+    position: -webkit-sticky;
     z-index: 3;
     top: 0;
 }
