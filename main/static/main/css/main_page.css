@@ -57,8 +57,8 @@ h2{
     margin: 30px 10px 30px 0;
 }
 .service > img{
-    /* width: 144px;
-    height: 80px; */
+    max-width: 184px;
+    max-height: 117px;
     display: block;
     margin: 0 auto;
 }
@@ -136,11 +136,8 @@ h2{
 }
 .service__button{
     max-width: 100%;
-<<<<<<< HEAD
     min-width: 165px;
-=======
     min-width: 170px;
->>>>>>> 5c8267df72960c75710ad4ffd4050063a7be6fcd
     height: 50px;
     font-family: 'Montserrat';
     font-style: normal;

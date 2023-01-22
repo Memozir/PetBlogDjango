@@ -22,9 +22,9 @@ class Services(models.Model):
     image = models.ImageField(upload_to='services/', null=True, blank=True)
     more_info = models.TextField(verbose_name='Подробнее', max_length=600, blank=True)
     more_info = models.TextField(verbose_name='Подробнее', max_length=650, blank=True)
-    money_limit = models.PositiveSmallIntegerField(verbose_name='Лимит по займу')
-    age_start = models.PositiveSmallIntegerField(verbose_name='Начальный возраст', default=18)
-    age_end = models.PositiveSmallIntegerField(verbose_name='Конечный возраст', default=65)
+    money_limit = models.CharField(verbose_name='Лимит по займу', max_length=127)
+    age_start = models.CharField(verbose_name='Начальный возраст', default=18, max_length=127)
+    age_end = models.CharField(verbose_name='Конечный возраст', default=65, max_length=127)
     stake = models.FloatField(verbose_name='Процентная ставка', blank=True, null=True)
     text_left_from_stake = models.CharField(verbose_name='Текст слева от процентной ставки', blank=True,
                                             max_length=100)
