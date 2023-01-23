@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))# Path(__file__).resolve().parent.parent
 
@@ -12,13 +15,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 SCRIPTS_DIR = os.path.join(STATIC_ROOT, 'scripts')
 STATICFILES_DIRS = [SCRIPTS_DIR]
 
+DB_NAME = os.getenv('NAME')
+DB_USER = os.getenv('USER')
+DB_PASS = os.getenv('DB_PASSWORD')
+DB_HOST = os.getenv('HOST')
+
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'credit_db',  #os.getenv('NAME'),
-         'USER': 'postgres',  #os.getenv('USER'),
-         'PASSWORD': '188558787356_t',  #os.getenv('DB_PASSWORD'), #'esmiralda_822',
-         'HOST': '127.0.0.1',  #os.getenv('HOST'),
+         'NAME': DB_NAME, #os.environ.get('NAME'),  #os.getenv('NAME'),
+         'USER': DB_USER,  #os.getenv('USER'),
+         'PASSWORD': DB_PASS,  #os.getenv('DB_PASSWORD'), #'esmiralda_>
+         'HOST': DB_HOST,  #os.getenv('HOST'),
          'PORT': '',
      }
 }
