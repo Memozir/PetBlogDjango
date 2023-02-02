@@ -71,6 +71,9 @@ h2{
 .service__age__amount{
     color: #2EA7FF;
 }
+.service__percent{
+    text-align: center;
+}
 .service__more-info{
     display: block;
     line-height: 21px;

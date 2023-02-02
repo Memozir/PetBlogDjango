@@ -86,7 +86,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-SECRET_KEY = os.getenv('SECRET_KEY') # 'django-insecure-y!k#j!)^G&SRDGY#&i0=9ui43q-0eklbfad6dxnuyt@$exuxmy%72114wn+'
+SECRET_KEY = "django-insecure-y!kj!)^G&SRDGY&i0=9ui43q-0eklbfad6dxnuyt@$exuxmy%72114wn+" #os.getenv('SECRET_KEY')
 
 STATIC_URL = 'static/'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
