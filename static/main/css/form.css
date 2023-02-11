@@ -92,11 +92,11 @@
     border-radius: 25px;
     text-align: center;
 }
-.questions-form > .questions-form__questions input[type=radio]{
+.questions-form > .questions-form__questions input[type=radio] label{
     -webkit-appearance: none;
     position: relative;
 }
-.questions-form > .questions-form__questions input[type=radio]~label::before{
+.questions-form > .questions-form__questions input[type=radio] label::before{
     content: '';
     display: inline-block;
     opacity: 0;
@@ -111,8 +111,8 @@
 .questions-form > .questions-form__questions input[type=radio]::after{
     content: '';
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     border: 2px solid #2EA7FF;
     border-radius: 50%;
     background-color: transparent;

@@ -1,0 +1,46 @@
+<div class="questions-wrap">
+    <div class="questions-block">
+        <form id="sort_loans" action="service_find/" method="post" class="questions-form">
+            {% csrf_token %}
+
+            <div class="form__close_button">
+                <span></span>
+            </div>
+
+            <h3>Опросы</h3>
+
+            <div class="questions-form__questions">
+                <fieldset class="question-1">
+                    <legend>Укажите ваш возраст</legend>
+                    {{ form.age }}
+                    <!-- <div class="q-1__a-1-wrap">
+                        
+                    </div> -->
+
+                </fieldset>
+
+                <fieldset class="question-2">
+                    <legend for="sum">Укажите сумму займа</legend>
+                    <!-- <input type="number" placeholder="Укажите сумму" name="sum"> -->
+                    {{ form.sum }}
+                </fieldset>
+
+                <fieldset class="question-3">
+                    <legend>На какой срок вы хотите взять займ</legend>
+                    {{ form.duration}}
+                </fieldset>
+
+                <fieldset class="question-4">
+                    <legend>Есть ли у вас непогашенный кредит/займ</legend>
+                    {{ form.is_autstanding}}
+                </fieldset>
+
+                <fieldset class="question-5">
+                    <legend>Вы хотите получить деньги в руки или на карту</legend>
+                    {{ form.how_get}}
+                </fieldset>
+             </div>
+            <button form="sort_loans" class="questions-form__button">Применить</button>
+        </form>
+    </div>
+</div>
