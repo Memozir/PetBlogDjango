@@ -21,99 +21,10 @@
 </head>
 <body>
 
-    <div class="questions-wrap">
-        <div class="questions-block">
-            <form id="sort_loans" action="" method="get" class="questions-form">
-                <div class="form__close_button">
-                    <span></span>
-                </div>
-
-                <h3>Опросы</h3>
-
-                <div class="questions-form__questions">
-                    <fieldset class="question-1">
-                        <legend>Укажите ваш возраст</legend>
-    
-                        <div class="q-1__a-1-wrap">
-                            <input id="question-1__choice-1" type="radio" name="age">
-                            <label for="question-1__choice-1">18-24</label>
-                        </div>
-    
-                        <div class="q-1__a-2-wrap">
-                            <input id="question-1__choice_2" type="radio" name="age">
-                            <label for="question-1__choice_2" >25-35</label>
-                        </div>
-                        <div class="q-1__a-3-wrap">
-                            <input id="question-1__choice_3" type="radio" name="age">
-                            <label for="question-1__choice_3" >35-55</label>
-                        </div>
-                        <div class="q-1__a-4-wrap">
-                            <input id="question-1__choice_4" type="radio" name="age">
-                            <label for="question-1__choice_4" >55+</label>
-                        </div>
-                    </fieldset>
-    
-                    <fieldset class="question-2">
-                        <legend for="sum">Укажите сумму займа</legend>
-                        <input type="number" placeholder="Укажите сумму">
-                    </fieldset>
-    
-                    <fieldset class="question-3">
-                        <legend>На какой срок вы хотите взять займ</legend>
-    
-                        <div class="q-3__a-1-wrap">
-                            <input id="question-3__choice_1" type="radio" name="period">
-                            <label for="question-3__choice_1">от 0 до 10</label>
-                        </div>
-                        <div class="q-3__a-3-wrap">
-                            <input id="question-3__choice_2" type="radio" name="period">
-                            <label for="question-3__choice_2">от 10 до 20</label>
-                        </div>
-                        <div class="q-3__a-3-wrap">
-                            <input id="question-3__choice_3" type="radio" name="period">
-                            <label for="question-3__choice_3">от 20 до 30</label>
-                        </div>
-                        <div class="q-3__a-4-wrap">
-                            <input id="question-3__choice_4" type="radio" name="period">
-                            <label for="question-3__choice_4">от 30 и дольше</label>
-                        </div>
-                        <!-- .q-2__a-1-wrap+.q-2__a-2-wrap+.q-2__a-3-wrap+.q-2__a-4-wrap -->
-                    </fieldset>
-
-                    <fieldset class="question-4">
-                        <legend>Есть ли у вас непогашенный кредит/займ</legend>
-    
-                        <div class="q-4__a-1-wrap">
-                            <input type="radio" name="outstanding" id="question_4__choice-1">
-                            <label for="question_4__choice-1">Да</label>
-                        </div>
-                        <div class="q-4__a-2-wrap">
-                            <input type="radio" name="outstanding" id="question_4__choice-2">
-                            <label for="question_4__choice-2">Нет</label>
-                        </div>
-                        <!-- .q-3__a-1-wrap+.q-3__a-2-wrap -->
-                    </fieldset>
-    
-                    <fieldset class="question-5">
-                        <legend>Вы хотите получить деньги в руки или на карту</legend>
-    
-                        <div class="q-5__a-1-wrap">
-                            <input type="radio" name="money_get_type" id="question_5__choice-1">
-                            <label for="question_5__choice-1">В руки</label>
-                        </div>
-                        <div class="q-5__a-2-wrap">
-                            <input type="radio" name="money_get_type" id="question_5__choice-2">
-                            <label for="question_5__choice-2">На карту</label>
-                        </div>
-                    </fieldset>
-                </div>
-
-                <button form="sort_loans" class="questions-form__button">Применить</button>
-            </form>
-        </div>
-    </div>
+    {% include 'includes/service_form.html' %}
 
     <div class="wrapper">
+
         {%include 'includes/header.html'%}
 
         <main>
