@@ -32,12 +32,14 @@ def service_find(request):
 
         if form.is_valid():
             sum_value = int(form.cleaned_data['sum'])
-
+            
             services = Services.objects.annotate(
-                money_limit_int__lt=Cast('money_limit', output_field=IntegerField())
-            ).filter(
-                money_limit_int__lt=sum_value)
+                money_limit_int=Cast('money_limit', output_field=IntegerField())
+            ).filter(money_limit_int__gte=sum_value)
 
+            print(services)
+            form = ServiceFindFrom()
+            
             context = {
                 'news': None,
                 'services': services,
@@ -45,6 +47,6 @@ def service_find(request):
                 'form': form
             }
 
-        return render(request, template_name='main/index.html', context=context)
+            return render(request, template_name='main/index.html', context=context)
     else:
-        redirect('main/index.html')
+        render(request, template_name='main/index.html', context=None)
