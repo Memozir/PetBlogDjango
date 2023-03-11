@@ -29,13 +29,13 @@
                 </div>
 		
                 <div class="article big-article">
-                    <img src="{{ big_article.preview_image.url }}" alt="" class="big-article__img">
-                    <p class="article__title">{{ big_article.title }}</p>
-                    <p class="article__text">{{ big_article.description }}</p>
+                    <img src="{{ object_list.big_article.preview_image.url }}" alt="" class="big-article__img">
+                    <p class="article__title">{{ object_list.big_article.title }}</p>
+                    <p class="article__text">{{ object_list.big_article.description }}</p>
                     <div class="article__bottom-block">
-                        <div class="article__button"><a href="{{ big_article.get_absolute_url }}">Подробнее</a></div>
+                        <div class="article__button"><a href="{{ object_list.big_article.get_absolute_url }}">Подробнее</a></div>
                         <div class="article__date">
-                            <span>{{ big_article.date }}</span>
+                            <span>{{ object_list.big_article.date }}</span>
                         </div>
                     </div>
                 </div>		

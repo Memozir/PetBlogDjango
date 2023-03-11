@@ -1,7 +1,7 @@
 {% load static %}
 
 <div class="small-articles-wrap">
-    {% for article in article_list %}
+    {% for article in object_list.article_list %}
     <div class="article small-article">
         <img src="{{ article.preview_image.url }}" alt="" class="big-article__img"> <!-- img/blog/small_article_1.jpg -->
         <p class="article__title">{{article.title}}</p>

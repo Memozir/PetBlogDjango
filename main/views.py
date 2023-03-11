@@ -3,8 +3,36 @@ from .models import News, Services
 from django.http import HttpResponse
 from django.db.models.functions import Cast
 from django.db.models import IntegerField
+from django.views.generic import View, FormView, ListView
 
 from .forms import ServiceFindFrom
+
+
+class ServiceFindFormView(FormView):
+    def post(self, request):
+        form = ServiceFindFrom(request.POST)
+
+        if form.is_valid():
+            sum_value = int(form.cleaned_data['sum'])
+                
+            services = Services.objects.annotate(
+                money_limit_int=Cast('money_limit', output_field=IntegerField())
+            ).filter(money_limit_int__gte=sum_value)
+
+            print(services)
+            form = ServiceFindFrom()
+                
+            context = {
+                'news': None,
+                'services': services,
+                'serevices_second': None,
+                'form': form
+            }
+
+            return render(request, template_name='main/index.html', context=context)
+    
+    def get(self, request):
+        return render(request, template_name='main/index.html', context=None)
 
 
 def index(request):
