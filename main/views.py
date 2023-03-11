@@ -49,4 +49,4 @@ def service_find(request):
 
             return render(request, template_name='main/index.html', context=context)
     else:
-        render(request, template_name='main/index.html', context=None)
+        redirect('')
