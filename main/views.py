@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.db.models.functions import Cast
 from django.db.models import IntegerField
 from django.views.generic import View, FormView, ListView
+from django.contrib.auth.forms import UserCreationForm
 
 from .forms import ServiceFindFrom
 
@@ -42,39 +43,13 @@ def index(request):
     services_second = services[8:]
     
     form = ServiceFindFrom()
-    
+    # form = UserCreationForm()
+
     context = {
         'news': news,
         'services': services_first,
         'services_second': services_second,
-        'form': form
+        'form': form,
     }
     
     return render(request, 'main/index.html', context=context)
-
-
-def service_find(request):
-    
-    if request.method == 'POST':
-        form = ServiceFindFrom(request.POST)
-
-        if form.is_valid():
-            sum_value = int(form.cleaned_data['sum'])
-            
-            services = Services.objects.annotate(
-                money_limit_int=Cast('money_limit', output_field=IntegerField())
-            ).filter(money_limit_int__gte=sum_value)
-
-            print(services)
-            form = ServiceFindFrom()
-            
-            context = {
-                'news': None,
-                'services': services,
-                'serevices_second': None,
-                'form': form
-            }
-
-            return render(request, template_name='main/index.html', context=context)
-    else:
-        redirect('')

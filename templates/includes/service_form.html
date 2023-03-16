@@ -1,5 +1,6 @@
 <div class="questions-wrap">
     <div class="questions-block">
+        
         <form id="sort_loans" action="/service_find/" method="POST" class="questions-form">
             {% csrf_token %}
 
@@ -13,15 +14,10 @@
                 <fieldset class="question-1">
                     <legend>Укажите ваш возраст</legend>
                     {{ form.age }}
-                    <!-- <div class="q-1__a-1-wrap">
-                        
-                    </div> -->
-
                 </fieldset>
 
                 <fieldset class="question-2">
                     <legend for="sum">Укажите сумму займа</legend>
-                    <!-- <input type="number" placeholder="Укажите сумму" name="sum"> -->
                     {{ form.sum }}
                 </fieldset>
 
@@ -41,6 +37,7 @@
                 </fieldset>
              </div>
             <button form="sort_loans" class="questions-form__button">Применить</button>
+
         </form>
     </div>
 </div>

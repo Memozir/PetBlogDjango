@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.contrib.auth.forms import UserCreationForm
 
+from .forms import UserCreate
 
 # Create your views here.
 
